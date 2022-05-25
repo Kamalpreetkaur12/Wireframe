@@ -1,0 +1,38 @@
+{
+  "name": "temp_wireframe-kamalpreetkaur12",
+  "version": "1.0.0",
+  "description": "An HTML CSS boilerplate with built-in sass support:",
+  "main": "index.html",
+  "author": "",
+  "scripts": {
+    "start": "run-p watch watch:styles",
+    "build": "run-s clean clean:styles build:styles copy",
+    "deploy": "run-s build publish",
+    "build:styles": "sass src/scss:src/styles",
+    "watch": "live-server src",
+    "watch:styles": "sass src/scss:src/styles --watch",
+    "clean": "rm -rf dist",
+    "clean:styles": "rm -rf src/styles",
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
+    "publish": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "latest",
+    "live-server": "latest",
+    "npm-run-all": "latest",
+    "sass": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fbw-22-E03/temp_wireframe-Kamalpreetkaur12.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fbw-22-E03/temp_wireframe-Kamalpreetkaur12/issues"
+  },
+  "homepage": "https://github.com/Fbw-22-E03/temp_wireframe-Kamalpreetkaur12#readme"
+}
